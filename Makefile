@@ -20,7 +20,7 @@ upgrade-tools:
 	$(VENV)/bin/python -m pip install build
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+	$(VENV)/bin/python -m pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
 
 # Install project dependencies
 install: venv upgrade-tools
