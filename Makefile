@@ -22,6 +22,15 @@ upgrade-tools:
 lint:
 	$(VENV)/bin/python -m pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
 
+format:
+	$(VENV)/bin/python -m black *.py
+
+	
+refactor: format lint
+
+deploy:
+	#deploy goes here
+
 # Install project dependencies
 install: venv upgrade-tools
 	@echo "Installing project dependencies..."
