@@ -19,6 +19,9 @@ upgrade-tools:
 	@echo "Installing build tools..."
 	$(VENV)/bin/python -m pip install build
 
+lint:
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+
 # Install project dependencies
 install: venv upgrade-tools
 	@echo "Installing project dependencies..."
