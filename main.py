@@ -1,3 +1,5 @@
+#!/usr/bin/env /workspaces/MLOpsTraining/.venv/bin/python
+
 from mylib.calculator import add
 import click
 
